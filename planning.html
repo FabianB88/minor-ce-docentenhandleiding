@@ -106,9 +106,10 @@
 </head>
 <body>
   <div class="layout">
+    <div class="sidebar-overlay" onclick="toggleMenu()"></div>
 
     <!-- Sidebar -->
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <div class="sidebar-brand">
           <span class="brand-subtitle">HAN Minor</span>
@@ -171,6 +172,7 @@
     <!-- Main Content -->
     <main class="main">
       <header class="main-header">
+        <button class="mobile-menu-btn" onclick="toggleMenu()">&#9776;</button>
         <h1 class="page-title">Planning</h1>
       </header>
 
@@ -736,5 +738,11 @@
     </main>
 
   </div>
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.querySelector('.sidebar-overlay').classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
