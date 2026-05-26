@@ -467,9 +467,12 @@ a:hover {
   font-size: 1.5rem;
   line-height: 1;
   margin-right: 1rem;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
-.mobile-menu-btn:hover {
+.mobile-menu-btn:hover,
+.mobile-menu-btn:active {
   background: #333;
 }
 
@@ -483,6 +486,8 @@ a:hover {
   bottom: 0;
   background: rgba(0,0,0,0.5);
   z-index: 99;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 /* Responsive */
@@ -491,6 +496,8 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 60;
   }
 
   .sidebar {
@@ -512,6 +519,9 @@ a:hover {
 
   .main-header {
     padding: 0 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 50;
   }
 
   .main-content {

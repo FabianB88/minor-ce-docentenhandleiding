@@ -451,10 +451,13 @@
 
   </div>
   <script>
-    function toggleMenu() {
+    function toggleMenu(e) {
+      if (e) e.preventDefault();
       document.getElementById('sidebar').classList.toggle('open');
       document.querySelector('.sidebar-overlay').classList.toggle('open');
     }
+    document.querySelector('.mobile-menu-btn').addEventListener('touchend', toggleMenu);
+    document.querySelector('.sidebar-overlay').addEventListener('touchend', toggleMenu);
   </script>
 </body>
 </html>
