@@ -465,6 +465,89 @@ a:hover {
   }
 }
 
+/* Collapsible sections */
+.collapsible {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.collapsible-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  background: var(--surface);
+  transition: background 0.12s ease;
+  user-select: none;
+}
+
+.collapsible-header:hover {
+  background: var(--bg);
+}
+
+.collapsible-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--han-black);
+  margin: 0;
+}
+
+.collapsible-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.collapsible.open .collapsible-icon {
+  transform: rotate(45deg);
+}
+
+.collapsible-content {
+  display: none;
+  padding: 0 1.25rem 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.collapsible.open .collapsible-content {
+  display: block;
+}
+
+/* Quick links / jump nav */
+.quick-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.quick-nav a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: all 0.12s ease;
+}
+
+.quick-nav a:hover {
+  border-color: var(--han-magenta);
+  color: var(--han-magenta);
+  text-decoration: none;
+}
+
 /* Print */
 @media print {
   .sidebar {
@@ -473,5 +556,9 @@ a:hover {
 
   .main {
     margin-left: 0;
+  }
+
+  .collapsible-content {
+    display: block !important;
   }
 }
