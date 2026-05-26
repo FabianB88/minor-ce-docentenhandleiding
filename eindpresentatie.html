@@ -3,8 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eindpresentatie | Minor Circulaire Economie</title>
+  <title>Eindpresentatie & Beoordeling | Minor Circulaire Economie</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .scoring-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin: 1rem 0;
+    }
+    .scoring-table th, .scoring-table td {
+      padding: 0.6rem 0.75rem;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    .scoring-table th {
+      background: var(--han-black);
+      color: white;
+      font-weight: 600;
+    }
+    .scoring-table tr:nth-child(even) {
+      background: var(--bg);
+    }
+    .weight-badge {
+      display: inline-block;
+      background: var(--han-magenta-light);
+      color: var(--han-magenta);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 10px;
+    }
+    .threshold-badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 10px;
+      margin-left: 0.5rem;
+    }
+    .grade-scale {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    .grade-box {
+      padding: 0.75rem;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    .grade-box.fail { background: #fee2e2; color: #991b1b; }
+    .grade-box.pass { background: #fef3c7; color: #92400e; }
+    .grade-box.good { background: #d1fae5; color: #065f46; }
+    .grade-box.excellent { background: #dbeafe; color: #1e40af; }
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 0.75rem 0;
+      font-size: 0.78rem;
+    }
+    .indicator-cell {
+      background: var(--surface);
+      padding: 0.6rem;
+    }
+    .indicator-header {
+      background: var(--bg);
+      font-weight: 600;
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+    .criterion-section {
+      margin: 1.5rem 0;
+      padding: 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .criterion-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--han-black);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .criterion-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -24,6 +123,10 @@
           <a href="index.html" class="nav-link">
             <span class="nav-icon">&#9679;</span>
             Home
+          </a>
+          <a href="planning.html" class="nav-link">
+            <span class="nav-icon">&#9679;</span>
+            Planning
           </a>
         </div>
 
@@ -69,57 +172,342 @@
     <!-- Main Content -->
     <main class="main">
       <header class="main-header">
-        <h1 class="page-title">Eindpresentatie & Assessment</h1>
+        <h1 class="page-title">Eindpresentatie & Beoordeling</h1>
       </header>
 
       <div class="main-content">
         <p class="lead">
-          Het semester wordt afgesloten met een workshop bij de opdrachtgever en een portfolio-assessment.
-          Eindproducten zijn interventies, acties, beroepsproducten of onderbouwde adviezen.
+          Het semester wordt afgesloten met twee beoordelingsmomenten: een workshop/presentatie bij de opdrachtgever (Transitieplan) en een individueel portfolio-assessment.
         </p>
 
-        <h2>Twee onderdelen</h2>
-
-        <div class="card-grid">
-          <div class="card">
-            <div class="card-title">Workshop bij opdrachtgever</div>
-            <p class="card-text">
-              Studenten presenteren hun werk in workshopvorm bij de organisatie.
-              Beoordeling door aanwezige examinatoren.
-            </p>
-            <span class="badge badge-primary">Presentatie</span>
-          </div>
-
-          <div class="card">
-            <div class="card-title">Portfolio Assessment</div>
-            <p class="card-text">
-              Individueel assessment op basis van portfolio met persoonlijke groei,
-              ontwikkeling in vaardigheden/competenties en kortcyclische opdrachten.
-            </p>
-            <span class="badge badge-primary">Individueel</span>
-          </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <h2>Eindproducten</h2>
-        <p>Eindproducten zijn expliciet <strong>geen</strong> klinische onderzoeksrapporten, maar:</p>
-        <ul>
-          <li>Interventies</li>
-          <li>Acties</li>
-          <li>Beroepsproducten</li>
-          <li>Onderbouwde adviezen</li>
-        </ul>
-
         <div class="callout callout-primary">
-          <p><strong>Kwaliteit:</strong> De kwaliteit van het project wordt niet alleen bepaald door het eindresultaat,
-          maar vooral door kwaliteit van denken, proces, keuzes en professionele ontwikkeling gedurende het semester.</p>
+          <p><strong>Eindproducten</strong> zijn expliciet géén klinische onderzoeksrapporten, maar interventies, acties, beroepsproducten of onderbouwde adviezen.</p>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- TRANSITIEPLAN -->
+        <!-- ============================================ -->
+        <h2>Beoordeling Transitieplan (Workshop)</h2>
+        <p>De eindpresentatie/workshop wordt gegeven bij de opdrachtgever in het bijzijn van de examinatoren. Beoordeling vindt plaats op 4 competenties.</p>
+
+        <div class="callout callout-info">
+          <p><strong>Randvoorwaarde:</strong> De beroepsproducten zijn ingeleverd via HandIn voor de deadline en de eindpresentatie/workshop is gegeven voor de opdrachtgever in het bijzijn van de examinatoren.</p>
+        </div>
+
+        <!-- Competentie 1 -->
+        <div class="criterion-section">
+          <div class="criterion-title">
+            Competentie 1: Probleembegrip & Methodische Aanpak
+            <span class="weight-badge">×3 — max 15 pt</span>
+          </div>
+
+          <h4 style="margin-top: 1rem; font-size: 0.85rem;">Interpretatie & kadering</h4>
+          <p class="criterion-desc">De student bekijkt de uitdaging/vraagstuk van de opdrachtgever kritisch en herkent kansen en/of risico's.</p>
+
+          <h4 style="font-size: 0.85rem;">Methodische aanpak</h4>
+          <p class="criterion-desc">De student werkt volgens een herkenbare en passende werkwijze en methode.</p>
+
+          <h4 style="font-size: 0.85rem;">Relevantie en doelgerichtheid</h4>
+          <p class="criterion-desc">De gekozen aanpak en informatievergaring is logisch in relatie tot het vraagstuk en leidt tot bruikbare inzichten.</p>
+        </div>
+
+        <!-- Competentie 2 -->
+        <div class="criterion-section">
+          <div class="criterion-title">
+            Competentie 2: Analyse & Redenering
+            <span class="weight-badge">×3 — max 15 pt</span>
+          </div>
+
+          <h4 style="margin-top: 1rem; font-size: 0.85rem;">Inzicht & patroonherkenning</h4>
+          <p class="criterion-desc">De student legt relevante verbanden, oorzaken, belangen of knelpunten bloot.</p>
+
+          <h4 style="font-size: 0.85rem;">Logische redenering</h4>
+          <p class="criterion-desc">Argumenten/oplossingen worden logisch opgebouwd en zijn navolgbaar.</p>
+
+          <h4 style="font-size: 0.85rem;">Onderbouwde gevolgtrekkingen en afwegingen</h4>
+          <p class="criterion-desc">De student maakt logische, onderbouwde gevolgtrekkingen die richting geven aan keuzes, oplossingsrichtingen of vervolgstappen.</p>
+        </div>
+
+        <!-- Competentie 3 -->
+        <div class="criterion-section">
+          <div class="criterion-title">
+            Competentie 3: Ontwerp- & Oplossingsvermogen
+            <span class="weight-badge">×3 — max 15 pt</span>
+          </div>
+
+          <h4 style="margin-top: 1rem; font-size: 0.85rem;">Oplossingsgericht en creatief denken</h4>
+          <p class="criterion-desc">De student verkent meerdere mogelijke richtingen en kan onderbouwen waarom een richting passend is.</p>
+
+          <h4 style="font-size: 0.85rem;">Professionele kwaliteit van de beroepsproduct(en)</h4>
+          <p class="criterion-desc">Product(en) is/zijn logisch opgebouwd, helder uitgewerkt en bruikbaar voor de opdrachtgever.</p>
+
+          <h4 style="font-size: 0.85rem;">Toepasbaarheid en haalbaarheid</h4>
+          <p class="criterion-desc">De oplossing/uitwerking is realistisch, uitvoerbaar en levert toegevoegde waarde binnen de praktijkcontext.</p>
+        </div>
+
+        <!-- Competentie 4 -->
+        <div class="criterion-section">
+          <div class="criterion-title">
+            Competentie 4: Stakeholderbetrokkenheid & Professioneel Handelen
+            <span class="weight-badge">×3 — max 15 pt</span>
+          </div>
+
+          <h4 style="margin-top: 1rem; font-size: 0.85rem;">Stakeholders identificeren en betrekken</h4>
+          <p class="criterion-desc">De student betrekt relevante stakeholders op zinvolle momenten en benut hun perspectieven.</p>
+
+          <h4 style="font-size: 0.85rem;">Professionele communicatie en verwachtingsmanagement</h4>
+          <p class="criterion-desc">De student communiceert duidelijk, zorgvuldig en responsief naar opdrachtgever en stakeholders en stemt verwachtingen effectief af.</p>
+
+          <h4 style="font-size: 0.85rem;">Kwaliteit van interactie met opdrachtgever</h4>
+          <p class="criterion-desc">De workshop levert een inhoudelijke dialoog op waarin inzichten, keuzes en oplossingen worden gevalideerd.</p>
+        </div>
+
+        <h3>Scoringsmodel Transitieplan</h3>
+        <table class="scoring-table">
+          <thead>
+            <tr>
+              <th>Competentie</th>
+              <th>Gewicht</th>
+              <th>Max. punten</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1 — Probleembegrip en methodische aanpak</td>
+              <td>×3</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>2 — Analyse en redenering</td>
+              <td>×3</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>3 — Ontwerp en oplossingsvermogen</td>
+              <td>×3</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>4 — Stakeholderbetrokkenheid en professioneel handelen</td>
+              <td>×3</td>
+              <td>15</td>
+            </tr>
+            <tr style="font-weight: 700; background: var(--han-magenta-light);">
+              <td>Totaal</td>
+              <td></td>
+              <td>60</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><strong>Omrekening naar cijfer:</strong> cijfer = (totaalpunten / 60) × 9 + 1 — afgerond op één decimaal.</p>
+
+        <div class="grade-scale">
+          <div class="grade-box fail">
+            <strong>Onvoldoende</strong><br>
+            0–32 punten<br>
+            Cijfer 1,0–5,4
+          </div>
+          <div class="grade-box pass">
+            <strong>Grens</strong><br>
+            33–34 punten<br>
+            Cijfer ≈ 5,5
+          </div>
+          <div class="grade-box good">
+            <strong>Voldoende</strong><br>
+            35–44 punten<br>
+            Cijfer 6,0–7,5
+          </div>
+          <div class="grade-box excellent">
+            <strong>Goed</strong><br>
+            45–60 punten<br>
+            Cijfer 7,6–10,0
+          </div>
         </div>
 
         <div class="divider"></div>
 
-        <div class="placeholder">
-          <p>Gedetailleerde beoordelingscriteria en formats worden later toegevoegd.</p>
+        <!-- ============================================ -->
+        <!-- INDIVIDUEEL ASSESSMENT -->
+        <!-- ============================================ -->
+        <h2>Beoordeling Individueel Assessment (Portfolio)</h2>
+        <p>Het individueel assessment beoordeelt de professionele ontwikkeling van de student op basis van portfolio en reflectiegesprek. Beoordeling vindt plaats op 5 criteria.</p>
+
+        <div class="callout callout-info">
+          <p><strong>Randvoorwaarde:</strong> Beroepsproducten zijn voor de deadline ingediend via HandIn (reflectiedocument en/of portfolio).</p>
+        </div>
+
+        <!-- Criterium 1 -->
+        <div class="criterion-section">
+          <div class="criterion-title">
+            Criterium 1: Beroepsproducten
+            <span class="weight-badge">×2 — max 8 pt</span>
+          </div>
+          <p class="criterion-desc"><strong>Professionele kwaliteit van het werk.</strong> De beroepsproducten vormen het bewijsmateriaal. De assessor beoordeelt de professionele kwaliteit en diepgang op hbo-niveau. De student licht toe wat de producten laten zien en waarom.</p>
+
+          <div class="indicator-grid">
+            <div class="indicator-cell indicator-header">Onvoldoende (1)</div>
+            <div class="indicator-cell indicator-header">Matig (2)</div>
+            <div class="indicator-cell indicator-header">Voldoende (3)</div>
+            <div class="indicator-cell indicator-header">Goed (4)</div>
+            <div class="indicator-cell">Weinig diepgang. Keuzes nauwelijks onderbouwd. Geen zelfstandig professioneel denken.</div>
+            <div class="indicator-cell">Enige diepgang maar beperkte onderbouwing. Wisselend niveau.</div>
+            <div class="indicator-cell">Helder professioneel denken. Keuzes logisch onderbouwd, inhoudelijke samenhang.</div>
+            <div class="indicator-cell">Scherp, zelfstandig denken. Overtuigend onderbouwd, aantoonbare waarde voor praktijk.</div>
+          </div>
+        </div>
+
+        <!-- Criterium 2 -->
+        <div class="criterion-section">
+          <div class="criterion-title">
+            Criterium 2: Eigenaarschap
+            <span class="weight-badge">×3 — max 12 pt</span>
+            <span class="threshold-badge">⚑ Drempelcriterium</span>
+          </div>
+          <p class="criterion-desc"><strong>Eigenaarschap en professionele redenering.</strong> De student laat zien dat hij/zij daadwerkelijk eigenaar is van het werk en kan gemaakte keuzes inhoudelijk verantwoorden — ook binnen groepscontext.</p>
+
+          <div class="indicator-grid">
+            <div class="indicator-cell indicator-header">Onvoldoende (1)</div>
+            <div class="indicator-cell indicator-header">Matig (2)</div>
+            <div class="indicator-cell indicator-header">Voldoende (3)</div>
+            <div class="indicator-cell indicator-header">Goed (4)</div>
+            <div class="indicator-cell">Kan werk niet helder toelichten. Waarom-vragen blijven onbeantwoord. Eigenaarschap niet aantoonbaar.</div>
+            <div class="indicator-cell">Globale uitleg maar beperkte onderbouwing. Verwijst naar groep zonder eigen positie.</div>
+            <div class="indicator-cell">Licht werk helder toe, onderbouwt keuzes logisch. Eigen bijdrage duidelijk zichtbaar.</div>
+            <div class="indicator-cell">Diepgaand inzicht, overtuigende onderbouwing. Neemt professionele positie in bij doorvragen.</div>
+          </div>
+
+          <div class="callout callout-primary" style="margin-top: 1rem;">
+            <p><strong>Let op:</strong> Een score van 1 op Eigenaarschap leidt automatisch tot een onvoldoende voor het gehele assessment, ongeacht de totaalscore.</p>
+          </div>
+        </div>
+
+        <!-- Criterium 3 -->
+        <div class="criterion-section">
+          <div class="criterion-title">
+            Criterium 3: Reflectie
+            <span class="weight-badge">×2 — max 8 pt</span>
+          </div>
+          <p class="criterion-desc"><strong>Kritisch analytisch vermogen.</strong> De student kan het eigen werk en de eigen aannames kritisch bevragen, nuanceren en plaatsen in een bredere professionele context.</p>
+
+          <div class="indicator-grid">
+            <div class="indicator-cell indicator-header">Onvoldoende (1)</div>
+            <div class="indicator-cell indicator-header">Matig (2)</div>
+            <div class="indicator-cell indicator-header">Voldoende (3)</div>
+            <div class="indicator-cell indicator-header">Goed (4)</div>
+            <div class="indicator-cell">Beschrijvend of oppervlakkig. Aannames niet kritisch besproken.</div>
+            <div class="indicator-cell">Benoemt sterke/zwakke punten maar eenzijdig. Beperkingen zonder implicaties.</div>
+            <div class="indicator-cell">Reflecteert realistisch op kwaliteit, aannames en beperkingen. Onderbouwd en relevant.</div>
+            <div class="indicator-cell">Diepgaand en kritisch. Toont intellectuele onafhankelijkheid.</div>
+          </div>
+        </div>
+
+        <!-- Criterium 4 -->
+        <div class="criterion-section">
+          <div class="criterion-title">
+            Criterium 4: Leerproces
+            <span class="weight-badge">×3 — max 12 pt</span>
+          </div>
+          <p class="criterion-desc"><strong>Regie over het eigen leerproces.</strong> De student laat zien dat hij/zij bewuste keuzes heeft gemaakt over de eigen professionele ontwikkeling. Het portfolio dient als bewijsmateriaal.</p>
+
+          <div class="indicator-grid">
+            <div class="indicator-cell indicator-header">Onvoldoende (1)</div>
+            <div class="indicator-cell indicator-header">Matig (2)</div>
+            <div class="indicator-cell indicator-header">Voldoende (3)</div>
+            <div class="indicator-cell indicator-header">Goed (4)</div>
+            <div class="indicator-cell">Kan keuzes niet uitleggen. Activiteiten opgesomd zonder leerlogica.</div>
+            <div class="indicator-cell">Benoemt wat gedaan is maar beperkte onderbouwing. Eigen regie herkenbaar maar niet bewust gestuurd.</div>
+            <div class="indicator-cell">Legt helder uit welke keuzes en waarom. Coherente leerlogica, aantoonbaar eigenaarschap.</div>
+            <div class="indicator-cell">Overtuigende, bewuste leerlogica. Vrijheid en eigen regie bewust ingezet.</div>
+          </div>
+        </div>
+
+        <!-- Criterium 5 -->
+        <div class="criterion-section">
+          <div class="criterion-title">
+            Criterium 5: Ontwikkeling
+            <span class="weight-badge">×2 — max 8 pt</span>
+          </div>
+          <p class="criterion-desc"><strong>Groei als circulaire professional.</strong> De student toont aantoonbare ontwikkeling in circulair denken en professioneel handelen. Koppeling aan GreenComp: reflecting on values, exploring sustainability futures.</p>
+
+          <div class="indicator-grid">
+            <div class="indicator-cell indicator-header">Onvoldoende (1)</div>
+            <div class="indicator-cell indicator-header">Matig (2)</div>
+            <div class="indicator-cell indicator-header">Voldoende (3)</div>
+            <div class="indicator-cell indicator-header">Goed (4)</div>
+            <div class="indicator-cell">Nauwelijks persoonlijke ontwikkeling benoemd. Geen verandering zichtbaar.</div>
+            <div class="indicator-cell">Enige ontwikkeling maar zwakke koppeling aan circulair denken. Niet scherp verwoord.</div>
+            <div class="indicator-cell">Herkenbare, onderbouwde ontwikkeling. Concreet gekoppeld aan ervaringen in minor.</div>
+            <div class="indicator-cell">Scherpe, bewuste ontwikkeling. Doorvertaald naar toekomstig professioneel handelen.</div>
+          </div>
+        </div>
+
+        <h3>Scoringsmodel Individueel Assessment</h3>
+        <table class="scoring-table">
+          <thead>
+            <tr>
+              <th>Criterium</th>
+              <th>Gewicht</th>
+              <th>Max. punten</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1 — Professionele kwaliteit van het werk</td>
+              <td>×2</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>2 — Eigenaarschap en professionele redenering ⚑</td>
+              <td>×3</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>3 — Kritisch analytisch vermogen</td>
+              <td>×2</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>4 — Regie over het eigen leerproces</td>
+              <td>×3</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>5 — Groei als circulaire professional</td>
+              <td>×2</td>
+              <td>8</td>
+            </tr>
+            <tr style="font-weight: 700; background: var(--han-magenta-light);">
+              <td>Totaal</td>
+              <td></td>
+              <td>48</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><strong>Omrekening naar cijfer:</strong> cijfer = (totaalpunten / 48) × 9 + 1 — afgerond op één decimaal.</p>
+
+        <div class="grade-scale">
+          <div class="grade-box fail">
+            <strong>Onvoldoende</strong><br>
+            0–24 punten<br>
+            Cijfer 1,0–5,4
+          </div>
+          <div class="grade-box pass">
+            <strong>Grens</strong><br>
+            25–26 punten<br>
+            Cijfer ≈ 5,5
+          </div>
+          <div class="grade-box good">
+            <strong>Voldoende</strong><br>
+            27–35 punten<br>
+            Cijfer 6,0–7,5
+          </div>
+          <div class="grade-box excellent">
+            <strong>Goed</strong><br>
+            36–48 punten<br>
+            Cijfer 7,6–10,0
+          </div>
         </div>
 
       </div>

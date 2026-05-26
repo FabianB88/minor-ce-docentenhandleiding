@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planning | Minor Circulaire Economie</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: 80px 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin: 1.5rem 0;
+      font-size: 0.85rem;
+    }
+    .schedule-grid.three-col {
+      grid-template-columns: 80px 1fr 1fr 1fr;
+    }
+    .schedule-cell {
+      background: var(--surface);
+      padding: 0.75rem;
+    }
+    .schedule-header {
+      background: var(--han-black);
+      color: var(--han-white);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .schedule-week {
+      background: var(--han-magenta-light);
+      color: var(--han-magenta-dark);
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .schedule-week small {
+      font-weight: 400;
+      font-size: 0.7rem;
+      opacity: 0.8;
+    }
+    .schedule-item {
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .schedule-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .schedule-activity {
+      font-weight: 600;
+      color: var(--han-black);
+      margin-bottom: 2px;
+    }
+    .schedule-teacher {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .schedule-time {
+      font-size: 0.7rem;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+    .schedule-highlight {
+      background: rgba(229,0,85,0.08);
+    }
+    .period-title {
+      background: var(--han-magenta);
+      color: white;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin: 2.5rem 0 1rem;
+    }
+    .structure-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+      font-size: 0.85rem;
+    }
+    .structure-box h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .structure-box code {
+      background: var(--surface);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <span class="brand-subtitle">HAN Minor</span>
+          <span class="brand-title">Circulaire Economie</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-title">Overzicht</div>
+          <a href="index.html" class="nav-link">
+            <span class="nav-icon">&#9679;</span>
+            Home
+          </a>
+          <a href="planning.html" class="nav-link active">
+            <span class="nav-icon">&#9679;</span>
+            Planning
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-title">Begeleiding</div>
+          <a href="procescoaching.html" class="nav-link">
+            <span class="nav-icon">&#9679;</span>
+            Procescoaching
+          </a>
+          <a href="workspace.html" class="nav-link">
+            <span class="nav-icon">&#9679;</span>
+            Workspace Begeleiding
+          </a>
+          <a href="midstake.html" class="nav-link">
+            <span class="nav-icon">&#9679;</span>
+            Midstake
+          </a>
+          <a href="eindpresentatie.html" class="nav-link">
+            <span class="nav-icon">&#9679;</span>
+            Eindpresentatie
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-title">Bronnen</div>
+          <a href="e-learnings.html" class="nav-link">
+            <span class="nav-icon">&#9679;</span>
+            E-learnings
+          </a>
+          <a href="materialen.html" class="nav-link">
+            <span class="nav-icon">&#9679;</span>
+            Materialen
+          </a>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        Minor Circulaire Economie<br>
+        HAN University of Applied Sciences
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <header class="main-header">
+        <h1 class="page-title">Planning</h1>
+      </header>
+
+      <div class="main-content">
+        <p class="lead">
+          Weekplanning voor de Minor Circulaire Economie, opgedeeld in Periode 1 en Periode 2.
+        </p>
+
+        <div class="callout callout-info">
+          <p><strong>Lesvrije periodes:</strong></p>
+          <ul style="margin-bottom: 0;">
+            <li><strong>Herfstvakantie:</strong> 17 oktober t/m 25 oktober 2026</li>
+            <li><strong>Kerstvakantie:</strong> 19 december 2026 t/m 3 januari 2027</li>
+          </ul>
+        </div>
+
+        <!-- PERIODE 1 -->
+        <div class="period-title">Periode 1</div>
+
+        <div class="structure-box">
+          <h4>Lesstructuur Periode 1</h4>
+          <p><strong>Maandag:</strong> <code>10:00-11:00</code> Vaardigheden | <code>13:00-14:30</code> Project | <code>15:30-17:00</code> Business Ethiek</p>
+          <p><strong>Donderdag oneven:</strong> <code>10:00-11:30</code> Theorie | <code>12:30-14:00</code> Project | <code>14:30-16:30</code> Vaardigheden</p>
+          <p><strong>Donderdag even:</strong> <code>10:00-11:30</code> Theorie | <code>12:30-14:00</code> Project | <code>14:30-16:00</code> Vaardigheden</p>
+        </div>
+
+        <!-- Week 1 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-header">Week</div>
+          <div class="schedule-cell schedule-header">Maandag</div>
+          <div class="schedule-cell schedule-header">Donderdag</div>
+
+          <div class="schedule-cell schedule-week">1<small>31 aug</small></div>
+          <div class="schedule-cell schedule-highlight">
+            <div class="schedule-item">
+              <div class="schedule-time">13:00-17:00</div>
+              <div class="schedule-activity">Kick-off</div>
+              <div class="schedule-teacher">Alle docenten, opdrachtgevers vanaf 14:30</div>
+            </div>
+          </div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Theorie waardecreatie intro</div>
+              <div class="schedule-teacher">Anouk Brinker</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Professionele ontwikkeling</div>
+              <div class="schedule-teacher">Anouk Brinker, Didier Piets</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Vaardigheden AI</div>
+              <div class="schedule-teacher">Fabian Berndsen</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week 2 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week">2<small>7 sep</small></div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Projectvaardigheden</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Intervisie</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Business Ethiek 1</div>
+              <div class="schedule-teacher">Fabian Berndsen</div>
+            </div>
+          </div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Theorie waardecreatie 1&2</div>
+              <div class="schedule-teacher">Anouk Brinker</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Professionele ontwikkeling</div>
+              <div class="schedule-teacher">Anouk Brinker</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">AI Playground</div>
+              <div class="schedule-teacher">Guus Witjes</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week 3 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week">3<small>14 sep</small></div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Vaardigheden AI</div>
+              <div class="schedule-teacher">Fabian Berndsen</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">AI Challenge & Projectcoaching</div>
+              <div class="schedule-teacher">Fabian Berndsen, Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Business Ethiek 2</div>
+              <div class="schedule-teacher">Michiel Kamphuis</div>
+            </div>
+          </div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Theorie 3</div>
+              <div class="schedule-teacher">Didier Piets</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Deliverables</div>
+              <div class="schedule-teacher">Anouk Brinker, Didier Piets</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Lowstake</div>
+              <div class="schedule-teacher">Anouk Brinker, Didier Piets</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Kennismaken opdrachtgever</div>
+              <div class="schedule-teacher">(gepland)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week 4 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week">4<small>21 sep</small></div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Projectvaardigheden</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Intervisie</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Business Ethiek 3</div>
+              <div class="schedule-teacher">Fabian Berndsen</div>
+            </div>
+          </div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Theorie 4</div>
+              <div class="schedule-teacher">Anouk Brinker</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Professionele ontwikkeling</div>
+              <div class="schedule-teacher">Anouk Brinker</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">AI Playground</div>
+              <div class="schedule-teacher">Guus Witjes</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week 5 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week">5<small>28 sep</small></div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Vaardigheden AI</div>
+              <div class="schedule-teacher">Fabian Berndsen</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Battle</div>
+              <div class="schedule-teacher">Alle docenten</div>
+            </div>
+          </div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Theorie 5</div>
+              <div class="schedule-teacher">Didier Piets</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Deliverables</div>
+              <div class="schedule-teacher">Anouk Brinker, Didier Piets</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Lowstake</div>
+              <div class="schedule-teacher">Anouk Brinker, Didier Piets</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week 6 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week">6<small>5 okt</small></div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Projectvaardigheden</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Intervisie</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Business Ethiek 4</div>
+              <div class="schedule-teacher">Fabian Berndsen</div>
+            </div>
+          </div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Theorie 6</div>
+              <div class="schedule-teacher">Anouk Brinker</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Professionele ontwikkeling</div>
+              <div class="schedule-teacher">Anouk Brinker</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">AI Playground</div>
+              <div class="schedule-teacher">Guus Witjes</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week 7 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week">7<small>12 okt</small></div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Vaardigheden AI</div>
+              <div class="schedule-teacher">Fabian Berndsen</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Voorbereiden Battle</div>
+              <div class="schedule-teacher">Fabian Berndsen, Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Business Ethiek 5</div>
+              <div class="schedule-teacher">Michiel Kamphuis</div>
+            </div>
+          </div>
+          <div class="schedule-cell schedule-highlight">
+            <div class="schedule-item">
+              <div class="schedule-activity">Battle</div>
+              <div class="schedule-teacher">Alle docenten</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Herfstvakantie -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week" style="background: #e5e7eb; color: #6b7280;">Vrij<small>17-25 okt</small></div>
+          <div class="schedule-cell" style="background: #f3f4f6; text-align: center; color: var(--text-muted); font-style: italic;" colspan="2">
+            Herfstvakantie
+          </div>
+          <div class="schedule-cell" style="background: #f3f4f6;">
+          </div>
+        </div>
+
+        <!-- Week 8 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week schedule-highlight">8<small>26 okt</small></div>
+          <div class="schedule-cell">
+            <div class="schedule-item" style="color: var(--text-muted); font-style: italic;">
+              Geen les
+            </div>
+          </div>
+          <div class="schedule-cell schedule-highlight">
+            <div class="schedule-item">
+              <div class="schedule-activity">Tentamen</div>
+              <div class="schedule-teacher">Voltijd en deeltijd</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week 9 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week schedule-highlight">9<small>2 nov</small></div>
+          <div class="schedule-cell schedule-highlight">
+            <div class="schedule-item">
+              <div class="schedule-activity">Midstakes</div>
+              <div class="schedule-teacher">Zelf inplannen</div>
+            </div>
+          </div>
+          <div class="schedule-cell schedule-highlight">
+            <div class="schedule-item">
+              <div class="schedule-activity">Midstakes</div>
+              <div class="schedule-teacher">Zelf inplannen</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERIODE 2 -->
+        <div class="period-title">Periode 2</div>
+
+        <div class="structure-box">
+          <h4>Lesstructuur Periode 2</h4>
+          <p><strong>Maandag oneven:</strong> <code>10:00-11:00</code> Project | <code>13:00-14:30</code> Project | <code>14:30-15:30</code> Vaardigheden</p>
+          <p><strong>Maandag even:</strong> <code>10:00-13:00</code> Project | <code>13:30-15:30</code> Project</p>
+          <p><strong>Donderdag oneven:</strong> <code>10:00-12:30</code> Project | <code>13:30-15:30</code> Vaardigheden</p>
+        </div>
+
+        <!-- P2 Week 1 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-header">Week</div>
+          <div class="schedule-cell schedule-header">Maandag</div>
+          <div class="schedule-cell schedule-header">Donderdag</div>
+
+          <div class="schedule-cell schedule-week">1</div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Stand-up</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Intervisie</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Vaardigheden JIT</div>
+              <div class="schedule-teacher">Fabian Berndsen</div>
+            </div>
+          </div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Professionele ontwikkeling</div>
+              <div class="schedule-teacher">Anouk Brinker</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">AI Playground</div>
+              <div class="schedule-teacher">Guus Witjes</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- P2 Week 2 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week">2</div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">AI Challenge</div>
+              <div class="schedule-teacher">Fabian Berndsen</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Projectcoaching</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+          </div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Deliverables</div>
+              <div class="schedule-teacher">Anouk Brinker, Didier Piets</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Lowstake</div>
+              <div class="schedule-teacher">Anouk Brinker, Didier Piets</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- P2 Week 3 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week">3</div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Stand-up</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Intervisie</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Vaardigheden JIT</div>
+              <div class="schedule-teacher">Fabian Berndsen</div>
+            </div>
+          </div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Professionele ontwikkeling</div>
+              <div class="schedule-teacher">Anouk Brinker</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">AI Playground</div>
+              <div class="schedule-teacher">Guus Witjes</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- P2 Week 4 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week">4</div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">AI Challenge</div>
+              <div class="schedule-teacher">Fabian Berndsen</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Projectcoaching</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+          </div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Deliverables</div>
+              <div class="schedule-teacher">Anouk Brinker, Didier Piets</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Lowstake</div>
+              <div class="schedule-teacher">Anouk Brinker, Didier Piets</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- P2 Week 5 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week">5</div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Stand-up</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Intervisie</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Vaardigheden JIT</div>
+              <div class="schedule-teacher">Fabian Berndsen</div>
+            </div>
+          </div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Professionele ontwikkeling</div>
+              <div class="schedule-teacher">Anouk Brinker</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">AI Playground</div>
+              <div class="schedule-teacher">Guus Witjes</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- P2 Week 6 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week">6</div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">AI Challenge</div>
+              <div class="schedule-teacher">Fabian Berndsen</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Projectcoaching</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+          </div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - Deliverables</div>
+              <div class="schedule-teacher">Anouk Brinker, Didier Piets</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Project - "Circulaire Oogst"</div>
+              <div class="schedule-teacher">Alle docenten</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kerstvakantie -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week" style="background: #e5e7eb; color: #6b7280;">Vrij<small>19 dec - 3 jan</small></div>
+          <div class="schedule-cell" style="background: #f3f4f6; text-align: center; color: var(--text-muted); font-style: italic;">
+            Kerstvakantie
+          </div>
+          <div class="schedule-cell" style="background: #f3f4f6;">
+          </div>
+        </div>
+
+        <!-- P2 Week 7 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week">7</div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Stand-up</div>
+              <div class="schedule-teacher">Fabian Berndsen</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Intervisie</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">Voorbereiden workshop</div>
+              <div class="schedule-teacher">Charlotte Bronckhorst</div>
+            </div>
+          </div>
+          <div class="schedule-cell">
+            <div class="schedule-item">
+              <div class="schedule-activity">Voorbereiden assessment</div>
+              <div class="schedule-teacher">Anouk Brinker</div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-activity">AI Playground</div>
+              <div class="schedule-teacher">Guus Witjes</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- P2 Week 8 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week schedule-highlight">8</div>
+          <div class="schedule-cell schedule-highlight">
+            <div class="schedule-item">
+              <div class="schedule-activity">Workshops</div>
+              <div class="schedule-teacher">Bij opdrachtgevers</div>
+            </div>
+          </div>
+          <div class="schedule-cell schedule-highlight">
+            <div class="schedule-item">
+              <div class="schedule-activity">Workshops</div>
+              <div class="schedule-teacher">Bij opdrachtgevers</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- P2 Week 9 -->
+        <div class="schedule-grid">
+          <div class="schedule-cell schedule-week schedule-highlight">9</div>
+          <div class="schedule-cell schedule-highlight">
+            <div class="schedule-item">
+              <div class="schedule-activity">Assessments</div>
+              <div class="schedule-teacher">Portfolio</div>
+            </div>
+          </div>
+          <div class="schedule-cell schedule-highlight">
+            <div class="schedule-item">
+              <div class="schedule-activity">Assessments</div>
+              <div class="schedule-teacher">Portfolio</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Docententeam</h2>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-title">Anouk Brinker</div>
+            <p class="card-text">Theorie waardecreatie, Professionele ontwikkeling</p>
+          </div>
+          <div class="card">
+            <div class="card-title">Charlotte Bronckhorst</div>
+            <p class="card-text">Projectcoaching, Intervisie, Projectvaardigheden</p>
+          </div>
+          <div class="card">
+            <div class="card-title">Didier Piets</div>
+            <p class="card-text">Theorie, Project deliverables & lowstake</p>
+          </div>
+          <div class="card">
+            <div class="card-title">Fabian Berndsen</div>
+            <p class="card-text">Vaardigheden AI, AI Challenge, Business Ethiek</p>
+          </div>
+          <div class="card">
+            <div class="card-title">Guus Witjes</div>
+            <p class="card-text">AI Playground</p>
+          </div>
+          <div class="card">
+            <div class="card-title">Michiel Kamphuis</div>
+            <p class="card-text">Business Ethiek</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>
