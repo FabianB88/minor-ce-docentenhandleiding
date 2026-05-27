@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procescoaching | Minor Circulaire Economie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <div class="sidebar-overlay" onclick="toggleMenu()"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <span class="brand-subtitle">HAN Minor</span>
+          <span class="brand-title">Circulaire Economie</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-title">Overzicht</div>
+          <a href="index.html" class="nav-link"><span class="nav-icon">&#9679;</span>Home</a>
+          <a href="planning.html" class="nav-link"><span class="nav-icon">&#9679;</span>Planning</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-title">Begeleiding</div>
+          <a href="procescoaching.html" class="nav-link active"><span class="nav-icon">&#9679;</span>Procescoaching</a>
+          <a href="workspace.html" class="nav-link"><span class="nav-icon">&#9679;</span>Workspace Begeleiding</a>
+          <a href="intervisie.html" class="nav-link"><span class="nav-icon">&#9679;</span>Intervisie</a>
+          <a href="midstake.html" class="nav-link"><span class="nav-icon">&#9679;</span>Midstake</a>
+          <a href="eindpresentatie.html" class="nav-link"><span class="nav-icon">&#9679;</span>Eindpresentatie</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-title">Bronnen</div>
+          <a href="e-learnings.html" class="nav-link"><span class="nav-icon">&#9679;</span>E-learnings</a>
+          <a href="materialen.html" class="nav-link"><span class="nav-icon">&#9679;</span>Materialen</a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">Minor Circulaire Economie<br>HAN University of Applied Sciences</div>
+    </aside>
+
+    <main class="main">
+      <header class="main-header">
+        <button class="mobile-menu-btn" onclick="toggleMenu()">&#9776;</button>
+        <h1 class="page-title">Procescoaching</h1>
+      </header>
+
+      <div class="main-content">
+        <p class="lead">
+          Procescoaching vindt ongeveer iedere twee weken plaats en richt zich op professionele ontwikkeling,
+          leerproces, samenwerking en procesdeliverables.
+        </p>
+
+        <div class="quick-nav">
+          <a href="#doel">Doel</a>
+          <a href="#opbouw">Opbouw gesprek</a>
+          <a href="#coachvragen">Coachvragen</a>
+          <a href="#rol">Rol docent</a>
+          <a href="#feedback">Na coaching</a>
+        </div>
+
+        <div class="callout callout-primary">
+          <p><strong>Kerngedachte:</strong> De coaching is procesmatig van aard.
+          Niet: "Hebben jullie het juiste antwoord?" Maar: "Ontwikkelen jullie jezelf en jullie project op een betekenisvolle manier?"</p>
+        </div>
+
+        <!-- Doel -->
+        <h2 id="doel">Doel van procescoaching</h2>
+        <div class="collapsible open">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">Waar richt de coaching zich op?</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <p>De coachingmomenten zijn <strong>geen</strong> klassieke voortgangsgesprekken. De focus ligt niet op inhoudelijke beoordeling of controleren of studenten "op schema" liggen.</p>
+            <p>De coaching richt zich op:</p>
+            <ul>
+              <li>Professionele ontwikkeling</li>
+              <li>Leerproces en eigenaarschap</li>
+              <li>Samenwerking en proceskwaliteit</li>
+              <li>Omgaan met complexiteit</li>
+              <li>Zichtbaar maken van denken en keuzes</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Opbouw -->
+        <h2 id="opbouw">Opbouw coachinggesprek</h2>
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">Structuur van ±30 minuten</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Onderdeel</th><th>Focus</th><th>Tijd</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>1. Persoonlijke check-in</strong></td><td>Energie, motivatie, leerproces, ambitie</td><td>5 min</td></tr>
+                  <tr><td><strong>2. Procescheck</strong></td><td>Samenwerking, voortgang, richting, eigenaarschap</td><td>5&ndash;10 min</td></tr>
+                  <tr><td><strong>3. Procesdeliverables</strong></td><td>Concrete tussenproducten en focus komende periode</td><td>10 min</td></tr>
+                  <tr><td><strong>4. Afspraken</strong></td><td>Feedbackmoment donderdag, oplevering, accountability</td><td>5 min</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coachvragen -->
+        <h2 id="coachvragen">Coachvragen per onderdeel</h2>
+
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">1. Persoonlijke check-in</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <ul>
+              <li>Waar krijg je momenteel energie van? Waar loop je op leeg?</li>
+              <li>Welke vaardigheid ontwikkel je momenteel?</li>
+              <li>Waar ben je trots op? Waar wil je bewuster in groeien?</li>
+              <li>Welke ontwikkeling wil je later zichtbaar maken in je portfolio?</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">2. Procescheck project &amp; samenwerking</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <ul>
+              <li>Hoe verloopt jullie samenwerking momenteel?</li>
+              <li>Waar blijven jullie misschien te lang hangen?</li>
+              <li>Waar gaan jullie juist te snel?</li>
+              <li>Wat begrijpen jullie inmiddels beter?</li>
+              <li>Waar wachten jullie nog te veel af?</li>
+              <li>Hoe maken jullie ontwikkeling zichtbaar?</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">3. Procesdeliverables</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <p>Deliverables maken denken zichtbaar, keuzes expliciet en feedback mogelijk. Studenten kiezen grotendeels zelf welke deliverables passend zijn.</p>
+            <p><strong>Voorbeelden:</strong></p>
+            <ul>
+              <li><em>Onderzoek:</em> Stakeholderanalyse, systeemanalyse, define-document, opportunity areas</li>
+              <li><em>Proces:</em> Scrumboard, planning, roadmap, samenwerkingsafspraken</li>
+              <li><em>Concept:</em> Mock-ups, prototypes, wireframes, storyboards, eerste validaties</li>
+              <li><em>Ontwikkeling:</em> Leerreflectie, portfolio-opzet, skillmapping</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Rol -->
+        <h2 id="rol">Rol van de procescoach</h2>
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">Vijf rollen in de praktijk</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Rol</th><th>Betekenis</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Procesbegeleider</strong></td><td>Helpt studenten grip krijgen op hun proces</td></tr>
+                  <tr><td><strong>Kritische sparringpartner</strong></td><td>Bevraagt aannames en keuzes</td></tr>
+                  <tr><td><strong>Ontwikkelcoach</strong></td><td>Stimuleert professionele groei</td></tr>
+                  <tr><td><strong>Accountability partner</strong></td><td>Houdt studenten actief en zichtbaar in beweging</td></tr>
+                  <tr><td><strong>Richtinggever</strong></td><td>Helpt studenten betekenisvolle vervolgstappen formuleren</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Na coaching -->
+        <h2 id="feedback">Na de coaching: Low-stake feedbackmoment</h2>
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">Donderdag: deliverables zichtbaar maken</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <p>Na de coaching werken studenten verder aan hun deliverables. Op <strong>donderdag</strong> worden deze zichtbaar gemaakt tijdens een low-stake feedbackmoment.</p>
+            <div class="callout callout-info">
+              <p><strong>Belangrijk:</strong> Procesdeliverables hoeven niet perfect te zijn.
+              Wel wordt verwacht dat studenten actief voortgang laten zien, afspraken nakomen en keuzes expliciet maken.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="callout callout-primary">
+          <p><strong>Didactische essentie:</strong> Zichtbaar werken is belangrijker dan perfect werken. De coachingmomenten ondersteunen dit proces en geven richting.</p>
+        </div>
+
+      </div>
+    </main>
+  </div>
+  <script>
+    function toggleMenu(e) {
+      if (e) e.preventDefault();
+      document.getElementById('sidebar').classList.toggle('open');
+      document.querySelector('.sidebar-overlay').classList.toggle('open');
+    }
+    document.querySelector('.mobile-menu-btn').addEventListener('touchend', toggleMenu);
+    document.querySelector('.sidebar-overlay').addEventListener('touchend', toggleMenu);
+  </script>
+</body>
+</html>
