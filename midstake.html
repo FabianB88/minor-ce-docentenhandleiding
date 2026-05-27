@@ -10,7 +10,6 @@
   <div class="layout">
     <div class="sidebar-overlay" onclick="toggleMenu()"></div>
 
-    <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <div class="sidebar-brand">
@@ -18,64 +17,29 @@
           <span class="brand-title">Circulaire Economie</span>
         </div>
       </div>
-
       <nav class="sidebar-nav">
         <div class="nav-section">
           <div class="nav-section-title">Overzicht</div>
-          <a href="index.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Home
-          </a>
-          <a href="planning.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Planning
-          </a>
+          <a href="index.html" class="nav-link"><span class="nav-icon">&#9679;</span>Home</a>
+          <a href="planning.html" class="nav-link"><span class="nav-icon">&#9679;</span>Planning</a>
         </div>
-
         <div class="nav-section">
           <div class="nav-section-title">Begeleiding</div>
-          <a href="procescoaching.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Procescoaching
-          </a>
-          <a href="workspace.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Workspace Begeleiding
-          </a>
-          <a href="intervisie.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Intervisie
-          </a>
-          <a href="midstake.html" class="nav-link active">
-            <span class="nav-icon">&#9679;</span>
-            Midstake
-          </a>
-          <a href="eindpresentatie.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Eindpresentatie
-          </a>
+          <a href="procescoaching.html" class="nav-link"><span class="nav-icon">&#9679;</span>Procescoaching</a>
+          <a href="workspace.html" class="nav-link"><span class="nav-icon">&#9679;</span>Workspace Begeleiding</a>
+          <a href="intervisie.html" class="nav-link"><span class="nav-icon">&#9679;</span>Intervisie</a>
+          <a href="midstake.html" class="nav-link active"><span class="nav-icon">&#9679;</span>Midstake</a>
+          <a href="eindpresentatie.html" class="nav-link"><span class="nav-icon">&#9679;</span>Eindpresentatie</a>
         </div>
-
         <div class="nav-section">
           <div class="nav-section-title">Bronnen</div>
-          <a href="e-learnings.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            E-learnings
-          </a>
-          <a href="materialen.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Materialen
-          </a>
+          <a href="e-learnings.html" class="nav-link"><span class="nav-icon">&#9679;</span>E-learnings</a>
+          <a href="materialen.html" class="nav-link"><span class="nav-icon">&#9679;</span>Materialen</a>
         </div>
       </nav>
-
-      <div class="sidebar-footer">
-        Minor Circulaire Economie<br>
-        HAN University of Applied Sciences
-      </div>
+      <div class="sidebar-footer">Minor Circulaire Economie<br>HAN University of Applied Sciences</div>
     </aside>
 
-    <!-- Main Content -->
     <main class="main">
       <header class="main-header">
         <button class="mobile-menu-btn" onclick="toggleMenu()">&#9776;</button>
@@ -88,144 +52,146 @@
           Studenten presenteren hun inzichten, keuzes en beroepsproducten in wording aan docenten en opdrachtgevers.
         </p>
 
+        <div class="quick-nav">
+          <a href="#zichtbaar">Wat moet zichtbaar zijn?</a>
+          <a href="#feedbackvragen">Feedbackvragen</a>
+          <a href="#aandachtspunten">Aandachtspunten</a>
+          <a href="#essentie">Didactische essentie</a>
+        </div>
+
         <div class="callout callout-primary">
           <p><strong>Doel:</strong> Na de midstake moet iedere groep scherper weten waar zij naartoe werken,
           duidelijkere prioriteiten hebben, en concreet verder kunnen ontwikkelen.</p>
         </div>
 
-        <h2>Wat moet zichtbaar zijn?</h2>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Onderdeel</th>
-                <th>Wat moet zichtbaar zijn?</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Onderzoek & analyse</strong></td>
-                <td>Stakeholderbegrip, patronen, spanningen, inzichten</td>
-              </tr>
-              <tr>
-                <td><strong>Probleemdefinitie</strong></td>
-                <td>Scherpe keuzes en duidelijke richting</td>
-              </tr>
-              <tr>
-                <td><strong>Conceptvorming</strong></td>
-                <td>Concrete beroepsproducten in wording</td>
-              </tr>
-              <tr>
-                <td><strong>Ontwikkelproces</strong></td>
-                <td>Iteratie, testen en zichtbare ontwikkeling</td>
-              </tr>
-              <tr>
-                <td><strong>Professionele houding</strong></td>
-                <td>Eigenaarschap, autonomie en onderbouwing</td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Wat moet zichtbaar zijn -->
+        <h2 id="zichtbaar">Wat moet zichtbaar zijn?</h2>
+        <div class="collapsible open">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">Vijf onderdelen en voorbeelden</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Onderdeel</th><th>Wat moet zichtbaar zijn?</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Onderzoek &amp; analyse</strong></td><td>Stakeholderbegrip, patronen, spanningen, inzichten</td></tr>
+                  <tr><td><strong>Probleemdefinitie</strong></td><td>Scherpe keuzes en duidelijke richting</td></tr>
+                  <tr><td><strong>Conceptvorming</strong></td><td>Concrete beroepsproducten in wording</td></tr>
+                  <tr><td><strong>Ontwikkelproces</strong></td><td>Iteratie, testen en zichtbare ontwikkeling</td></tr>
+                  <tr><td><strong>Professionele houding</strong></td><td>Eigenaarschap, autonomie en onderbouwing</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Voorbeelden van beroepsproducten in wording</h4>
+            <ul>
+              <li>Mock-ups, wireframes, eerste websites</li>
+              <li>Storyboards, serviceconcepten</li>
+              <li>Prototypes, experimenten</li>
+              <li>Interventies, visualisaties</li>
+              <li>Eerste validaties</li>
+            </ul>
+            <div class="callout callout-info">
+              <p><strong>Let op:</strong> De kwaliteit zit niet alleen in hoe uitgewerkt iets is.
+              De kwaliteit zit vooral in de koppeling met inzichten, de gemaakte keuzes, de onderbouwing en de ontwikkelrichting.</p>
+            </div>
+          </div>
         </div>
 
-        <h3>Voorbeelden van beroepsproducten in wording</h3>
-        <ul>
-          <li>Mock-ups, wireframes, eerste websites</li>
-          <li>Storyboards, serviceconcepten</li>
-          <li>Prototypes, experimenten</li>
-          <li>Interventies, visualisaties</li>
-          <li>Eerste validaties</li>
-        </ul>
-
-        <div class="callout callout-info">
-          <p><strong>Let op:</strong> De kwaliteit zit niet alleen in hoe uitgewerkt iets is.
-          De kwaliteit zit vooral in de koppeling met inzichten, de gemaakte keuzes, de onderbouwing en de ontwikkelrichting.</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <h2>Feedbackvragen voor docenten</h2>
+        <!-- Feedbackvragen -->
+        <h2 id="feedbackvragen">Feedbackvragen voor docenten</h2>
         <p>De vragen tijdens de midstake moeten studenten helpen scherper kiezen, sneller concretiseren en actief verder ontwikkelen.</p>
 
-        <div class="card">
-          <div class="card-title">Onderzoek & richting</div>
-          <ul>
-            <li>Waar zit volgens jullie nu de grootste kans om daadwerkelijk impact te maken?</li>
-            <li>Waar zit de meeste waarde voor de opdrachtgever?</li>
-            <li>Welk onderdeel begrijpen jullie eigenlijk nog onvoldoende?</li>
-            <li>Welke keuze moeten jullie nu eigenlijk durven maken?</li>
-            <li>Waar zou nu 80% van jullie energie naartoe moeten gaan?</li>
-            <li>Wat negeren jullie momenteel nog omdat het lastig is?</li>
-          </ul>
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">Onderzoek &amp; richting</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <ul>
+              <li>Waar zit volgens jullie nu de grootste kans om daadwerkelijk impact te maken?</li>
+              <li>Waar zit de meeste waarde voor de opdrachtgever?</li>
+              <li>Welk onderdeel begrijpen jullie eigenlijk nog onvoldoende?</li>
+              <li>Welke keuze moeten jullie nu eigenlijk durven maken?</li>
+              <li>Waar zou nu 80% van jullie energie naartoe moeten gaan?</li>
+              <li>Wat negeren jullie momenteel nog omdat het lastig is?</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="card">
-          <div class="card-title">Conceptvorming & ontwikkeling</div>
-          <ul>
-            <li>Wat moet nu concreet verder ontwikkeld worden?</li>
-            <li>Welke aanname moet zo snel mogelijk getest worden?</li>
-            <li>Waarom zou iemand dit daadwerkelijk gaan gebruiken of willen?</li>
-            <li>Waar is het concept nog te veilig of voorspelbaar?</li>
-            <li>Welke onderdelen voegen nu eigenlijk weinig waarde toe?</li>
-            <li>Wat moet er over twee weken zichtbaar beter of sterker zijn?</li>
-            <li>Wat maakt dit uitvoerbaar binnen de context van de opdrachtgever?</li>
-          </ul>
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">Conceptvorming &amp; ontwikkeling</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <ul>
+              <li>Wat moet nu concreet verder ontwikkeld worden?</li>
+              <li>Welke aanname moet zo snel mogelijk getest worden?</li>
+              <li>Waarom zou iemand dit daadwerkelijk gaan gebruiken of willen?</li>
+              <li>Waar is het concept nog te veilig of voorspelbaar?</li>
+              <li>Welke onderdelen voegen nu eigenlijk weinig waarde toe?</li>
+              <li>Wat moet er over twee weken zichtbaar beter of sterker zijn?</li>
+              <li>Wat maakt dit uitvoerbaar binnen de context van de opdrachtgever?</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Aandachtspunten -->
+        <h2 id="aandachtspunten">Aandachtspunten</h2>
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">Signalen om op te letten als docent</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Let op</th><th>Signaal</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Oppervlakkig onderzoek</td><td>Veel informatie, weinig analyse</td></tr>
+                  <tr><td>Concepten zonder basis</td><td>Idee&euml;n zonder sterke inzichten</td></tr>
+                  <tr><td>Schijnvoortgang</td><td>Veel output, weinig echte keuzes</td></tr>
+                  <tr><td>Te vrijblijvende concepten</td><td>Richtingen blijven abstract</td></tr>
+                  <tr><td>Oplossingsfixatie</td><td>E&eacute;n idee verdedigen zonder reflectie</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Didactische essentie -->
+        <h2 id="essentie">Didactische essentie</h2>
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">Van begrijpen naar gericht cre&euml;ren</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <p>De midstake markeert de <strong>overgang van begrijpen naar gericht cre&euml;ren</strong>.</p>
+            <p>De midstake beoordeelt niet alleen wat studenten gemaakt hebben, maar vooral:</p>
+            <ul>
+              <li>Hoe zij denken, onderzoeken en kiezen</li>
+              <li>Hoe zij betekenis geven aan complexiteit</li>
+              <li>Hoe zij bewegen binnen onzekerheid</li>
+              <li>Hoe probleem en oplossing zich gezamenlijk ontwikkelen</li>
+            </ul>
+          </div>
         </div>
 
         <div class="divider"></div>
 
-        <h2>Aandachtspunten</h2>
-        <p>Let als docent op de volgende signalen:</p>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Let op</th>
-                <th>Signaal</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Oppervlakkig onderzoek</td>
-                <td>Veel informatie, weinig analyse</td>
-              </tr>
-              <tr>
-                <td>Concepten zonder basis</td>
-                <td>Ideeën zonder sterke inzichten</td>
-              </tr>
-              <tr>
-                <td>Schijnvoortgang</td>
-                <td>Veel output, weinig echte keuzes</td>
-              </tr>
-              <tr>
-                <td>Te vrijblijvende concepten</td>
-                <td>Richtingen blijven abstract</td>
-              </tr>
-              <tr>
-                <td>Oplossingsfixatie</td>
-                <td>Eén idee verdedigen zonder reflectie</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="callout callout-primary">
+          <p><strong>Kerngedachte:</strong> De midstake is geen tussentijdse beoordeling &mdash; het is een versneller. Studenten verlaten het moment met meer richting, scherpere keuzes en concrete vervolgstappen.</p>
         </div>
-
-        <div class="divider"></div>
-
-        <h2>Didactische essentie</h2>
-        <p>De midstake markeert de <strong>overgang van begrijpen naar gericht creëren</strong>.</p>
-
-        <p>De midstake beoordeelt niet alleen wat studenten gemaakt hebben, maar vooral:</p>
-        <ul>
-          <li>Hoe zij denken, onderzoeken en kiezen</li>
-          <li>Hoe zij betekenis geven aan complexiteit</li>
-          <li>Hoe zij bewegen binnen onzekerheid</li>
-          <li>Hoe probleem en oplossing zich gezamenlijk ontwikkelen</li>
-        </ul>
 
       </div>
     </main>
-
   </div>
   <script>
     function toggleMenu(e) {
