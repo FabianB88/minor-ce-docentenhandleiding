@@ -10,7 +10,6 @@
   <div class="layout">
     <div class="sidebar-overlay" onclick="toggleMenu()"></div>
 
-    <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <div class="sidebar-brand">
@@ -18,64 +17,29 @@
           <span class="brand-title">Circulaire Economie</span>
         </div>
       </div>
-
       <nav class="sidebar-nav">
         <div class="nav-section">
           <div class="nav-section-title">Overzicht</div>
-          <a href="index.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Home
-          </a>
-          <a href="planning.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Planning
-          </a>
+          <a href="index.html" class="nav-link"><span class="nav-icon">&#9679;</span>Home</a>
+          <a href="planning.html" class="nav-link"><span class="nav-icon">&#9679;</span>Planning</a>
         </div>
-
         <div class="nav-section">
           <div class="nav-section-title">Begeleiding</div>
-          <a href="procescoaching.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Procescoaching
-          </a>
-          <a href="workspace.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Workspace Begeleiding
-          </a>
-          <a href="intervisie.html" class="nav-link active">
-            <span class="nav-icon">&#9679;</span>
-            Intervisie
-          </a>
-          <a href="midstake.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Midstake
-          </a>
-          <a href="eindpresentatie.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Eindpresentatie
-          </a>
+          <a href="procescoaching.html" class="nav-link"><span class="nav-icon">&#9679;</span>Procescoaching</a>
+          <a href="workspace.html" class="nav-link"><span class="nav-icon">&#9679;</span>Workspace Begeleiding</a>
+          <a href="intervisie.html" class="nav-link active"><span class="nav-icon">&#9679;</span>Intervisie</a>
+          <a href="midstake.html" class="nav-link"><span class="nav-icon">&#9679;</span>Midstake</a>
+          <a href="eindpresentatie.html" class="nav-link"><span class="nav-icon">&#9679;</span>Eindpresentatie</a>
         </div>
-
         <div class="nav-section">
           <div class="nav-section-title">Bronnen</div>
-          <a href="e-learnings.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            E-learnings
-          </a>
-          <a href="materialen.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Materialen
-          </a>
+          <a href="e-learnings.html" class="nav-link"><span class="nav-icon">&#9679;</span>E-learnings</a>
+          <a href="materialen.html" class="nav-link"><span class="nav-icon">&#9679;</span>Materialen</a>
         </div>
       </nav>
-
-      <div class="sidebar-footer">
-        Minor Circulaire Economie<br>
-        HAN University of Applied Sciences
-      </div>
+      <div class="sidebar-footer">Minor Circulaire Economie<br>HAN University of Applied Sciences</div>
     </aside>
 
-    <!-- Main Content -->
     <main class="main">
       <header class="main-header">
         <button class="mobile-menu-btn" onclick="toggleMenu()">&#9776;</button>
@@ -87,52 +51,80 @@
           Collectieve perspectiefverbreding, betekenisgeving en gezamenlijke analyse.
         </p>
 
+        <div class="quick-nav">
+          <a href="#doel">Doel</a>
+          <a href="#rol">Rol docent</a>
+          <a href="#samenhang">Samenhang</a>
+        </div>
+
         <div class="callout callout-info">
-          <p><strong>Frequentie:</strong> Elke 2 weken (even weken) — Charlotte Bronckhorst</p>
+          <p><strong>Frequentie:</strong> Elke 2 weken (even weken) &mdash; Charlotte Bronckhorst</p>
         </div>
 
-        <h2>Doel van intervisie</h2>
-        <p>Intervisie is een gestructureerde vorm van collegiale consultatie waarbij studenten:</p>
-        <ul>
-          <li>Ervaringen en vraagstukken uit hun project delen</li>
-          <li>Gezamenlijk analyseren en betekenis geven</li>
-          <li>Nieuwe perspectieven en inzichten opdoen</li>
-          <li>Van elkaars aanpak en denkwijze leren</li>
-        </ul>
+        <!-- Doel -->
+        <h2 id="doel">Doel van intervisie</h2>
+        <div class="collapsible open">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">Wat bereiken studenten hiermee?</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <p>Intervisie is een gestructureerde vorm van collegiale consultatie waarbij studenten:</p>
+            <ul>
+              <li>Ervaringen en vraagstukken uit hun project delen</li>
+              <li>Gezamenlijk analyseren en betekenis geven</li>
+              <li>Nieuwe perspectieven en inzichten opdoen</li>
+              <li>Van elkaars aanpak en denkwijze leren</li>
+            </ul>
+            <div class="callout callout-primary" style="margin-top: 1rem;">
+              <p><strong>Niet de bedoeling:</strong> Intervisie is geen adviesronde of probleemoplossessie. De focus ligt op verkennen, begrijpen en perspectiefverbreding &mdash; niet op direct "fixen".</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rol docent -->
+        <h2 id="rol">Rol van de docent</h2>
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">Faciliteren, niet oplossen</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <p>De docent faciliteert het intervisieproces:</p>
+            <ul>
+              <li>Bewaakt de structuur en tijd</li>
+              <li>Stimuleert doorvragen en verdieping</li>
+              <li>Zorgt voor veilige, open sfeer</li>
+              <li>Helpt bij het formuleren van inzichten</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Samenhang -->
+        <h2 id="samenhang">Samenhang met andere begeleiding</h2>
+        <div class="collapsible">
+          <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+            <span class="collapsible-title">Hoe past intervisie in het geheel?</span>
+            <span class="collapsible-icon">+</span>
+          </div>
+          <div class="collapsible-content">
+            <p>Intervisie vult andere begeleidingsvormen aan:</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Vorm</th><th>Focus</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Intervisie</strong></td><td>Collectief leren, perspectiefverbreding</td></tr>
+                  <tr><td>Procescoaching</td><td>Individueel/duo leerproces en voortgang</td></tr>
+                  <tr><td>Workspace coaching</td><td>Just-in-time, ad-hoc ondersteuning</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
         <div class="divider"></div>
-
-        <h2>Rol van de docent</h2>
-        <p>De docent faciliteert het intervisieproces:</p>
-        <ul>
-          <li>Bewaakt de structuur en tijd</li>
-          <li>Stimuleert doorvragen en verdieping</li>
-          <li>Zorgt voor veilige, open sfeer</li>
-          <li>Helpt bij het formuleren van inzichten</li>
-        </ul>
-
-        <div class="card">
-          <div class="card-title">Niet de bedoeling</div>
-          <p class="card-text">Intervisie is geen adviesronde of probleemoplossessie. De focus ligt op verkennen, begrijpen en perspectiefverbreding — niet op direct "fixen".</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <h2>Samenhang met andere begeleiding</h2>
-        <p>Intervisie vult andere begeleidingsvormen aan:</p>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>Vorm</th><th>Focus</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>Intervisie</strong></td><td>Collectief leren, perspectiefverbreding</td></tr>
-              <tr><td>Procescoaching</td><td>Individueel/duo leerproces en voortgang</td></tr>
-              <tr><td>Workspace coaching</td><td>Just-in-time, ad-hoc ondersteuning</td></tr>
-            </tbody>
-          </table>
-        </div>
 
         <div class="callout callout-primary">
           <p><strong>Kerngedachte:</strong> Door elkaars vraagstukken te verkennen ontwikkelen studenten niet alleen inhoudelijk inzicht, maar ook professionele gespreksvaardigheden en analytisch vermogen.</p>
@@ -140,7 +132,6 @@
 
       </div>
     </main>
-
   </div>
   <script>
     function toggleMenu(e) {
