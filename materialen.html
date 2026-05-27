@@ -5,12 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Materialen | Minor Circulaire Economie</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .download-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .download-card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--han-black);
+    }
+    .download-card-desc {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      flex: 1;
+      margin: 0;
+    }
+    .download-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+      gap: 0.5rem;
+    }
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--han-black);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.45rem 0.9rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+    .btn-download:hover { background: #333; color: #fff; }
+    .btn-download svg { flex-shrink: 0; }
+    .filetype-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .ft-word  { background: #dbeafe; color: #1e40af; }
+    .ft-excel { background: #d1fae5; color: #065f46; }
+    .ft-pdf   { background: #fee2e2; color: #991b1b; }
+  </style>
 </head>
 <body>
   <div class="layout">
     <div class="sidebar-overlay" onclick="toggleMenu()"></div>
 
-    <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <div class="sidebar-brand">
@@ -18,68 +73,33 @@
           <span class="brand-title">Circulaire Economie</span>
         </div>
       </div>
-
       <nav class="sidebar-nav">
         <div class="nav-section">
           <div class="nav-section-title">Overzicht</div>
-          <a href="index.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Home
-          </a>
-          <a href="planning.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Planning
-          </a>
+          <a href="index.html" class="nav-link"><span class="nav-icon">&#9679;</span>Home</a>
+          <a href="planning.html" class="nav-link"><span class="nav-icon">&#9679;</span>Planning</a>
         </div>
-
         <div class="nav-section">
           <div class="nav-section-title">Begeleiding</div>
-          <a href="procescoaching.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Procescoaching
-          </a>
-          <a href="workspace.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Workspace Begeleiding
-          </a>
-          <a href="intervisie.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Intervisie
-          </a>
-          <a href="midstake.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Midstake
-          </a>
-          <a href="eindpresentatie.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            Eindpresentatie
-          </a>
+          <a href="procescoaching.html" class="nav-link"><span class="nav-icon">&#9679;</span>Procescoaching</a>
+          <a href="workspace.html" class="nav-link"><span class="nav-icon">&#9679;</span>Workspace Begeleiding</a>
+          <a href="intervisie.html" class="nav-link"><span class="nav-icon">&#9679;</span>Intervisie</a>
+          <a href="midstake.html" class="nav-link"><span class="nav-icon">&#9679;</span>Midstake</a>
+          <a href="eindpresentatie.html" class="nav-link"><span class="nav-icon">&#9679;</span>Eindpresentatie</a>
         </div>
-
         <div class="nav-section">
           <div class="nav-section-title">Bronnen</div>
-          <a href="e-learnings.html" class="nav-link">
-            <span class="nav-icon">&#9679;</span>
-            E-learnings
-          </a>
-          <a href="materialen.html" class="nav-link active">
-            <span class="nav-icon">&#9679;</span>
-            Materialen
-          </a>
+          <a href="e-learnings.html" class="nav-link"><span class="nav-icon">&#9679;</span>E-learnings</a>
+          <a href="materialen.html" class="nav-link active"><span class="nav-icon">&#9679;</span>Materialen</a>
         </div>
       </nav>
-
-      <div class="sidebar-footer">
-        Minor Circulaire Economie<br>
-        HAN University of Applied Sciences
-      </div>
+      <div class="sidebar-footer">Minor Circulaire Economie<br>HAN University of Applied Sciences</div>
     </aside>
 
-    <!-- Main Content -->
     <main class="main">
       <header class="main-header">
         <button class="mobile-menu-btn" onclick="toggleMenu()">&#9776;</button>
-        <h1 class="page-title">Materialen & Downloads</h1>
+        <h1 class="page-title">Materialen &amp; Downloads</h1>
       </header>
 
       <div class="main-content">
@@ -87,53 +107,141 @@
           Overzicht van beschikbare documenten, templates en ondersteunende materialen voor docenten.
         </p>
 
-        <h2>Formats & Templates</h2>
+        <div class="quick-nav">
+          <a href="#formats">Formats &amp; Templates</a>
+          <a href="#visie">Achtergrond &amp; Visie</a>
+          <a href="#beoordeling">Beoordelingsformulieren</a>
+          <a href="#onderbouwing">Onderbouwing</a>
+        </div>
+
+        <!-- ── Formats & Templates ── -->
+        <h2 id="formats">Formats &amp; Templates</h2>
         <div class="card-grid">
-          <div class="card">
-            <div class="card-title">Procescoaching Format</div>
-            <p class="card-text">Template voor het voeren van procescoachinggesprekken.</p>
-            <span class="badge badge-muted">Word</span>
+
+          <div class="download-card">
+            <div class="download-card-title">Procescoaching Format</div>
+            <p class="download-card-desc">Template voor het voeren van procescoachinggesprekken met deliverables en afspraken.</p>
+            <div class="download-card-footer">
+              <span class="filetype-badge ft-word">Word</span>
+              <a href="downloads/format-coaching-deliverables.docx" class="btn-download" download>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12L3 7h3V2h4v5h3L8 12z"/><rect x="2" y="13" width="12" height="1.5" rx="0.75"/></svg>
+                Download
+              </a>
+            </div>
           </div>
 
-          <div class="card">
-            <div class="card-title">Midstake Format</div>
-            <p class="card-text">Handleiding en feedbackvragen voor de midstake.</p>
-            <span class="badge badge-muted">Word</span>
+          <div class="download-card">
+            <div class="download-card-title">Midstake Format</div>
+            <p class="download-card-desc">Handleiding en feedbackvragen voor de midstake &mdash; versnellingsmoment halverwege het semester.</p>
+            <div class="download-card-footer">
+              <span class="filetype-badge ft-word">Word</span>
+              <a href="downloads/midstake-format.docx" class="btn-download" download>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12L3 7h3V2h4v5h3L8 12z"/><rect x="2" y="13" width="12" height="1.5" rx="0.75"/></svg>
+                Download
+              </a>
+            </div>
           </div>
 
-          <div class="card">
-            <div class="card-title">Beoordelingsformulier</div>
-            <p class="card-text">Format voor eindpresentatie en assessment.</p>
-            <span class="badge badge-muted">Word</span>
+          <div class="download-card">
+            <div class="download-card-title">Semesteroverzicht &amp; Planning</div>
+            <p class="download-card-desc">Planning en fasering van het semester 2026&ndash;2027 sem 1.</p>
+            <div class="download-card-footer">
+              <span class="filetype-badge ft-excel">Excel</span>
+              <a href="downloads/planning-2026-2027-sem1.xlsx" class="btn-download" download>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12L3 7h3V2h4v5h3L8 12z"/><rect x="2" y="13" width="12" height="1.5" rx="0.75"/></svg>
+                Download
+              </a>
+            </div>
           </div>
+
         </div>
 
         <div class="divider"></div>
 
-        <h2>Achtergrond & Visie</h2>
+        <!-- ── Achtergrond & Visie ── -->
+        <h2 id="visie">Achtergrond &amp; Visie</h2>
         <div class="card-grid">
-          <div class="card">
-            <div class="card-title">Coachingvisie</div>
-            <p class="card-text">Didactische uitgangspunten voor coaching en begeleiding.</p>
-            <span class="badge badge-muted">PDF</span>
+
+          <div class="download-card">
+            <div class="download-card-title">Coachingvisie Workspacebegeleiding</div>
+            <p class="download-card-desc">Didactische uitgangspunten voor coaching en begeleiding binnen de minor.</p>
+            <div class="download-card-footer">
+              <span class="filetype-badge ft-word">Word</span>
+              <a href="downloads/coachingvisie-workspacebegeleiding.docx" class="btn-download" download>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12L3 7h3V2h4v5h3L8 12z"/><rect x="2" y="13" width="12" height="1.5" rx="0.75"/></svg>
+                Download
+              </a>
+            </div>
           </div>
 
-          <div class="card">
-            <div class="card-title">Semesteroverzicht</div>
-            <p class="card-text">Planning en fasering van het semester.</p>
-            <span class="badge badge-muted">PDF</span>
-          </div>
         </div>
 
         <div class="divider"></div>
 
-        <div class="placeholder">
-          <p>Downloads worden later toegevoegd. Neem contact op met de coordinator voor toegang tot materialen.</p>
+        <!-- ── Beoordelingsformulieren ── -->
+        <h2 id="beoordeling">Beoordelingsformulieren</h2>
+        <div class="card-grid">
+
+          <div class="download-card">
+            <div class="download-card-title">Beoordelingsformulier Transitieplan</div>
+            <p class="download-card-desc">Formulier voor beoordeling van het Transitieplan (workshop bij opdrachtgever). Versie 3.</p>
+            <div class="download-card-footer">
+              <span class="filetype-badge ft-word">Word</span>
+              <a href="downloads/beoordelingsformulier-transitieplan-v3.docx" class="btn-download" download>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12L3 7h3V2h4v5h3L8 12z"/><rect x="2" y="13" width="12" height="1.5" rx="0.75"/></svg>
+                Download
+              </a>
+            </div>
+          </div>
+
+          <div class="download-card">
+            <div class="download-card-title">Beoordelingsformulier Individueel Assessment</div>
+            <p class="download-card-desc">Formulier voor het individueel portfolio-assessment. Versie 2.</p>
+            <div class="download-card-footer">
+              <span class="filetype-badge ft-word">Word</span>
+              <a href="downloads/beoordelingsformulier-assessment-v2.docx" class="btn-download" download>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12L3 7h3V2h4v5h3L8 12z"/><rect x="2" y="13" width="12" height="1.5" rx="0.75"/></svg>
+                Download
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ── Onderbouwing ── -->
+        <h2 id="onderbouwing">Onderbouwing</h2>
+        <div class="card-grid">
+
+          <div class="download-card">
+            <div class="download-card-title">Onderbouwing visie op leren</div>
+            <p class="download-card-desc">Theoretische en didactische onderbouwing van de visie op leren binnen de Minor Circulaire Economie.</p>
+            <div class="download-card-footer">
+              <span class="filetype-badge ft-word">Word</span>
+              <a href="downloads/onderbouwing-visie-op-leren.docx" class="btn-download" download>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12L3 7h3V2h4v5h3L8 12z"/><rect x="2" y="13" width="12" height="1.5" rx="0.75"/></svg>
+                Download
+              </a>
+            </div>
+          </div>
+
+          <div class="download-card">
+            <div class="download-card-title">Hoog Tempo AI Leren</div>
+            <p class="download-card-desc">Aanpak en principes voor het integreren van AI-leren in een hoog tempo binnen de minor.</p>
+            <div class="download-card-footer">
+              <span class="filetype-badge ft-word">Word</span>
+              <a href="downloads/hoog-tempo-ai-leren.docx" class="btn-download" download>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12L3 7h3V2h4v5h3L8 12z"/><rect x="2" y="13" width="12" height="1.5" rx="0.75"/></svg>
+                Download
+              </a>
+            </div>
+          </div>
+
         </div>
 
       </div>
     </main>
-
   </div>
   <script>
     function toggleMenu(e) {
