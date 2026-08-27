@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eindpresentatie &amp; Beoordeling | Minor Circulaire Economie</title>
+  <title>Eindpresentatie &amp; Beoordeling | Circulaire Economie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
   <style>
     /* ── Scoring table ── */
@@ -19,7 +22,7 @@
       text-align: left;
     }
     .scoring-table th {
-      background: var(--han-black);
+      background: var(--inkt);
       color: white;
       font-weight: 600;
     }
@@ -28,7 +31,7 @@
     /* ── Badges ── */
     .weight-badge {
       display: inline-block;
-      background: var(--han-magenta);
+      background: var(--accent);
       color: white;
       font-size: 0.65rem;
       font-weight: 700;
@@ -39,8 +42,8 @@
     }
     .threshold-badge {
       display: inline-block;
-      background: #fef3c7;
-      color: #92400e;
+      background: #F6F0E8;
+      color: #7D6034;
       font-size: 0.65rem;
       font-weight: 700;
       padding: 0.2rem 0.5rem;
@@ -63,17 +66,17 @@
       text-align: center;
       font-size: 0.8rem;
     }
-    .grade-box.fail      { background: #fee2e2; color: #991b1b; }
-    .grade-box.pass      { background: #fef3c7; color: #92400e; }
-    .grade-box.good      { background: #d1fae5; color: #065f46; }
-    .grade-box.excellent { background: #dbeafe; color: #1e40af; }
+    .grade-box.fail      { background: #FBEDEA; color: #A5342A; }
+    .grade-box.pass      { background: #F6F0E8; color: #7D6034; }
+    .grade-box.good      { background: #EDF3EC; color: #4A6349; }
+    .grade-box.excellent { background: #D0E3CF; color: #33452F; }
 
     /* ── Sub-items inside criteria ── */
     .sub-item { margin: 0.75rem 0; }
     .sub-item h4 {
       font-size: 0.9rem;
       font-weight: 600;
-      color: var(--han-black);
+      color: var(--inkt);
       margin: 0 0 0.25rem 0;
     }
     .sub-item p {
@@ -109,21 +112,21 @@
       line-height: 1.55;
     }
 
-    .rubric-level.fail    { border-color: #fca5a5; }
-    .rubric-level.fail    .rubric-level-header { background: #fee2e2; color: #991b1b; }
-    .rubric-level.fail    .rubric-level-body   { background: #fff8f8; }
+    .rubric-level.fail    { border-color: #E8B6B0; }
+    .rubric-level.fail    .rubric-level-header { background: #FBEDEA; color: #A5342A; }
+    .rubric-level.fail    .rubric-level-body   { background: #FDF6F4; }
 
-    .rubric-level.moderate { border-color: #fcd34d; }
-    .rubric-level.moderate .rubric-level-header { background: #fef3c7; color: #92400e; }
-    .rubric-level.moderate .rubric-level-body   { background: #fffdf0; }
+    .rubric-level.moderate { border-color: #DCC9A8; }
+    .rubric-level.moderate .rubric-level-header { background: #F6F0E8; color: #7D6034; }
+    .rubric-level.moderate .rubric-level-body   { background: #FBF7F1; }
 
-    .rubric-level.sufficient { border-color: #6ee7b7; }
-    .rubric-level.sufficient .rubric-level-header { background: #d1fae5; color: #065f46; }
-    .rubric-level.sufficient .rubric-level-body   { background: #f0fdf8; }
+    .rubric-level.sufficient { border-color: #C3D8C1; }
+    .rubric-level.sufficient .rubric-level-header { background: #EDF3EC; color: #4A6349; }
+    .rubric-level.sufficient .rubric-level-body   { background: #F5F9F4; }
 
-    .rubric-level.excellent { border-color: #93c5fd; }
-    .rubric-level.excellent .rubric-level-header { background: #dbeafe; color: #1e40af; }
-    .rubric-level.excellent .rubric-level-body   { background: #f0f7ff; }
+    .rubric-level.excellent { border-color: #A8C4A6; }
+    .rubric-level.excellent .rubric-level-header { background: #D0E3CF; color: #33452F; }
+    .rubric-level.excellent .rubric-level-body   { background: #EDF3EC; }
   </style>
 </head>
 <body>
@@ -133,7 +136,6 @@
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <div class="sidebar-brand">
-          <span class="brand-subtitle">HAN Minor</span>
           <span class="brand-title">Circulaire Economie</span>
         </div>
       </div>
@@ -157,7 +159,7 @@
           <a href="materialen.html" class="nav-link"><span class="nav-icon">&#9679;</span>Materialen</a>
         </div>
       </nav>
-      <div class="sidebar-footer">Minor Circulaire Economie<br>HAN University of Applied Sciences</div>
+      <div class="sidebar-footer">Studiemateriaal</div>
     </aside>
 
     <main class="main">
@@ -284,7 +286,7 @@
             <tr><td>2 &mdash; Analyse en redenering</td><td>&times;3</td><td>15</td></tr>
             <tr><td>3 &mdash; Ontwerp en oplossingsvermogen</td><td>&times;3</td><td>15</td></tr>
             <tr><td>4 &mdash; Stakeholderbetrokkenheid en professioneel handelen</td><td>&times;3</td><td>15</td></tr>
-            <tr style="font-weight: 700; background: var(--han-magenta-light);"><td>Totaal</td><td></td><td>60</td></tr>
+            <tr style="font-weight: 700; background: var(--accent-licht);"><td>Totaal</td><td></td><td>60</td></tr>
           </tbody>
         </table>
 
@@ -468,7 +470,7 @@
             <tr><td>3 &mdash; Kritisch analytisch vermogen</td><td>&times;2</td><td>8</td></tr>
             <tr><td>4 &mdash; Regie over het eigen leerproces</td><td>&times;3</td><td>12</td></tr>
             <tr><td>5 &mdash; Groei als circulaire professional</td><td>&times;2</td><td>8</td></tr>
-            <tr style="font-weight: 700; background: var(--han-magenta-light);"><td>Totaal</td><td></td><td>48</td></tr>
+            <tr style="font-weight: 700; background: var(--accent-licht);"><td>Totaal</td><td></td><td>48</td></tr>
           </tbody>
         </table>
 
