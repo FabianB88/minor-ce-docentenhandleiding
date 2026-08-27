@@ -28,8 +28,9 @@
       padding: 0.75rem;
     }
     .schedule-header {
-      background: var(--inkt);
-      color: var(--wit);
+      /* Zwart is te hard op het warme papier; de zijbalktint sluit beter aan. */
+      background: var(--zijbalk);
+      color: var(--text);
       font-weight: 600;
       font-size: 0.75rem;
       text-transform: uppercase;
@@ -73,7 +74,7 @@
       margin-bottom: 4px;
     }
     .schedule-highlight {
-      background: rgba(229,0,85,0.08);
+      background: var(--accent-licht);
     }
     .period-title {
       background: var(--accent);
@@ -197,7 +198,7 @@
 
       <div class="main-content">
         <p class="lead">
-          Weekplanning voor de Minor Circulaire Economie, opgedeeld in Periode 1 en Periode 2.
+          Weekplanning voor de minor, opgedeeld in periode 1 en 2. Voor actuele tijden en lokalen blijft het rooster leidend.
         </p>
 
         <div class="callout callout-info">
@@ -211,11 +212,7 @@
         <!-- PERIODE 1 -->
         <div class="period-title">Periode 1</div>
 
-        <div class="callout callout-info">
-          <p><strong>Voor tijden zie rooster</strong></p>
-        </div>
-
-        <div class="callout" style="background: rgba(229,0,85,0.06); border-left: 3px solid var(--accent);">
+        <div class="callout callout-primary">
           <p><strong>Weken 1–3: Gelijkwaardig gesprekspartner</strong><br>
           Deze weken staan in het teken van voldoende weten én kunnen om als gelijkwaardig gesprekspartner naast de opdrachtgever te staan. In week 3 ontmoeten studenten de opdrachtgever voor het eerste vervolggesprek.</p>
         </div>
@@ -610,10 +607,6 @@
 
         <!-- PERIODE 2 -->
         <div class="period-title">Periode 2</div>
-
-        <div class="callout callout-info">
-          <p><strong>Voor tijden zie rooster</strong></p>
-        </div>
 
         <!-- P2 Week 1 -->
         <div class="schedule-grid">
